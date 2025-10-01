@@ -1,0 +1,142 @@
+/* Adicionar aqui toda a estilização criada para sua aplicação. */
+
+* {
+    box-sizing: border-box; /* ajuda a definir melhor o tamanho dos elementos na pagina*/
+}
+
+body { /*a tag body nao precisa de ponto pq é do proprio html*/
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+.header {
+    background-color: black;
+    border-bottom: 3px solid #32b9cd;
+
+}
+
+/*container que esta dentro do header - (se for diferente todas as classes chamadas container seriam afetadas)*/
+.header .container{
+    display: flex;
+    justify-content: space-between; /*afastou os itens em seus extremos (logo de um lado - links do outro*/
+    align-items: center;
+    padding: 0 120px; /*dois valores - val1 cima baixo / val2 direita esquerda*/
+
+}
+
+.titulo {
+    color:#32b9cd;
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    width: 300px;
+    justify-content: space-between;
+    color: #e3b062
+}
+
+.navbar a{
+    /*Alterando a estilização padrão da tag <a> para mudar cor dos links*/   
+    color: #e3b062;
+    outline: none;
+    text-decoration: none;
+}
+
+.agora { /*current page - fica em negrito a sessao selecionada*/
+    font-weight: bolder;
+}
+
+.banner {
+    height: 400px;
+    width: 100%;
+    background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+    background-size: cover; /*ajuda a ajustar a imagem na pagina - (impede que a imagem quebre se for maior ou menor que a resolução da maquina)*/ 
+}
+
+/*configurando o container do banner*/
+.banner .container{
+    width: 100%;
+    height: 100%;
+    display: flex; /*ajusta o posicionamento da imagem do banner*/
+    justify-content: center;
+    align-items: center;
+}
+
+/*acessando o conteudo dentro da tag <p> exclusivo do banner*/
+.banner .container p{
+    width: 170px;
+    color: white;
+    margin: 0;
+    font-size: 24px;
+}
+
+.banner .container span{
+    font-weight: bolder;
+}
+
+
+/**************CONTEÚDO***************/
+
+.social {
+    height: 400px;
+    width: 100%;
+    background-color: #dcdcdc;
+}
+
+/*Manipular os elementos dentro do container do social - (que envolve todos os textos - tem que dps fazer separadamente)*/
+.social .container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes {
+    width: 80%; /*80% da largura em relaçao ao container que ele está inserido*/
+    display: flex; /*transforma em linha*/
+    justify-content: space-between; /*justify = horizontal / space-between = afastados perante o comprimento da div*/
+    align-items: center;
+
+}
+
+.box{
+    width: 250px;
+    display: flex;
+    flex-direction: column; /*flex p coluna - */
+    justify-content: center; /*horizontal*/
+    align-items: center; /*vertical*/
+    text-align: center;
+}
+
+.box img{
+    /* definindo tamanho das imagens - como um box */
+    width: 120px;
+    height: 120px;
+}
+
+.box h4{
+    margin: 0;
+    margin-top: 10px;
+    color: #ed145b
+}
+
+.footer{
+    height: 120px;
+    width: 100%;
+    background-color: #32b9cd;
+
+}
+
+.footer .container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /*dnv mudando a direção do flex - aqui é em coluna (elementos ficam um embaixo do outro)*/
+    align-items: center;
+    color: white
+}
+
+/******************* aqui termina o index html ******************************************************************************************/
